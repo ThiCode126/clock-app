@@ -1,5 +1,8 @@
 
 function App() {
+
+    const clientTimezoneOffset = new Date().getTimezoneOffset()/60;
+    console.log(clientTimezoneOffset)
   return (
     <div className="App">
       <header className="App-header">
