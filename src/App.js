@@ -1,16 +1,30 @@
+import { useEffect, useState } from "react";
 
 function App() {
 
-    const clientTimezoneOffset = new Date().getTimezoneOffset()/60;
-    console.log(clientTimezoneOffset)
+    const [infoUser, setInfoUser] = useState(null);
+
+    useEffect(() => {
+        const getGeoLoc = () => {
+            fetch("https://geolocation-db.com/json/85249190-4601-11eb-9067-21b51bc8dee3")
+            .then(response => response.json())
+            .then(data => setInfoUser(data));
+        }
+        getGeoLoc()
+      });
+
+    const Loading = () => {
+        return <h1>Loading</h1>
+    }
+
+    const MyApp = () => {
+        return infoUser.city;
+    }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-      </header>
-    </div>
+    <>
+        { infoUser ? <MyApp /> : <Loading /> }
+    </>
   );
 }
 
