@@ -14,10 +14,18 @@ function App() {
         
         const getInfoUser = async () => {   
             await axios.get("http://worldtimeapi.org/api/ip")
-            .then(res => setInfoTime(res.data));
+            .then(res => {
+                console.log(res.data)
+                setInfoTime(res.data)
+            })
+            //.then(res => setInfoTime(res.data));
             
             await axios.get("https://freegeoip.app/json/")
-            .then(res => setInfoZone(res.data));
+            .then(res => {
+                console.log(res.data)
+                setInfoZone(res.data)
+            })
+            //.then(res => setInfoZone(res.data));
         }
         getInfoUser();
 
