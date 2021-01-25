@@ -16,7 +16,7 @@ function App() {
             await axios.get("http://worldtimeapi.org/api/ip")
             .then(res => setInfoTime(res.data));
             
-            const resInfoZone = await axios.get("https://freegeoip.app/json/")
+            await axios.get("https://freegeoip.app/json/")
             .then(res => setInfoZone(res.data));
         }
         getInfoUser();
