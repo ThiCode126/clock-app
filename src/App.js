@@ -1,31 +1,57 @@
 import { useEffect, useState } from "react";
+import MyApp from "./Components/MyApp";
+import axios from 'axios';
 
 function App() {
 
-    const [infoUser, setInfoUser] = useState(null);
+    const [infoTime, setInfoTime] = useState(null);
+    const [infoZone, setInfoZone] = useState(null);
+    const [infoHour, setInfoHour] = useState(null);
+    const [quote, setQuote] = useState(null);
+    const [isNight, setIsNight] = useState(null);
 
     useEffect(() => {
-        const getGeoLoc = () => {
-            fetch("https://geolocation-db.com/json/85249190-4601-11eb-9067-21b51bc8dee3")
-            .then(response => response.json())
-            .then(data => setInfoUser(data));
+        
+        const getInfoUser = async () => {   
+            await axios.get("http://worldtimeapi.org/api/ip")
+            .then(res => setInfoTime(res.data));
+            
+            const resInfoZone = await axios.get("https://freegeoip.app/json/")
+            .then(res => setInfoZone(res.data));
         }
-        getGeoLoc()
-      });
+        getInfoUser();
+
+        const getQuote = async () => {
+            await axios.get("https://staging.quotable.io/random?minLength=100&maxLength=140&tags=technology")
+            .then(res => setQuote(res.data));
+        }
+        getQuote();
+
+        const getHourTheme = () => {
+            let infos = {}
+            let d = new Date();
+            infos.hour = d.getHours();
+            infos.hours = d.getHours() + ':' + d.getMinutes();
+            if (infos.hour <= 5 || infos.hour >= 18) {
+                document.body.classList = 'dark';
+                setIsNight(true);
+            } else {
+                document.body.classList = 'light';
+                setIsNight(false);
+            }
+            setInfoHour(infos);
+        }
+        getHourTheme();
+      }, []);
 
     const Loading = () => {
         return <h1>Loading</h1>
     }
 
-    const MyApp = () => {
-        return infoUser.city;
-    }
-
-  return (
-    <>
-        { infoUser ? <MyApp /> : <Loading /> }
-    </>
-  );
+    if (infoTime) {
+        return <MyApp infoTime={infoTime} infoZone={infoZone} infoHour={infoHour} quote={quote} isNight={isNight} />;
+      }
+      return <Loading />;
 }
 
 export default App;

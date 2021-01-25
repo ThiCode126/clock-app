@@ -1,3 +1,41 @@
 body {
     font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    max-height: 667px;
+
+    &.light {
+        background: url('../assets/mobile/bg-image-daytime.jpg') no-repeat;
+    }
+
+    &.dark {
+        background: url('../assets/mobile/bg-image-nighttime.jpg') no-repeat;
+    }
+}
+
+@media (min-width: 376px ) {
+    body {
+        max-height: 1024px;
+    
+        &.light {
+            background: url('../assets/tablet/bg-image-daytime.jpg') no-repeat;
+        }
+    
+        &.dark {
+            background: url('../assets/tablet/bg-image-nighttime.jpg') no-repeat;
+        }
+    }
+}
+
+@media (min-width: 769px ) {
+    body {
+        max-height: 800px;
+    
+        &.light {
+            background: url('../assets/desktop/bg-image-daytime.jpg') no-repeat;
+        }
+    
+        &.dark {
+            background: url('../assets/desktop/bg-image-nighttime.jpg') no-repeat;
+        }
+    }
 }
