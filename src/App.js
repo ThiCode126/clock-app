@@ -13,7 +13,7 @@ function App() {
     useEffect(() => {
         
         const getInfoUser = async () => {   
-            await axios.get("http://worldtimeapi.org/api/ip")
+            await axios.get("https://worldtimeapi.org/api/ip")
             .then(res => {
                 console.log(res.data)
                 setInfoTime(res.data)
