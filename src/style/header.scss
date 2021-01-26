@@ -5,7 +5,20 @@ header#header-quote {
     padding-top: 32px;
     grid-template-columns: auto 18px;
 
-        p#quote-content {
+        #quote-content {
             margin: 0 0 8px;
+            font-size: 12px;
+            line-height: 22px;
+        }
+
+        #quote-author {
+            margin: 0;
+            font-weight: bold;
+            font-size: 12px;
+            line-height: 22px;
+        }
+
+        #refresh-icon {
+            cursor: pointer;
         }
 }

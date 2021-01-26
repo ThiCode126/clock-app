@@ -2,10 +2,10 @@ import React from 'react'
 import Header from './Header'
 
 
-const MyApp = ({ infoTime, infoZone, infoHour, quote, isNight }) => {
+const MyApp = ({ infoTime, infoZone, infoHour, quote, onChangeQuote, isNight }) => {
     return (
         <>
-            <Header quote={quote} />
+            <Header quote={quote} onChangeQuote={onChangeQuote} />
             <section>
                 123
             </section>

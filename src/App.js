@@ -10,6 +10,11 @@ function App() {
     const [quote, setQuote] = useState(null);
     const [isNight, setIsNight] = useState(null);
 
+    const getQuote = async () => {
+        await axios.get("https://staging.quotable.io/random?minLength=100&maxLength=140&tags=technology")
+        .then(res => setQuote(res.data));
+    }
+
     useEffect(() => {
         
         const getInfoUser = async () => {   
@@ -28,11 +33,6 @@ function App() {
             .then(res => setInfoZone(res.data));
         }
         getInfoUser();
-
-        const getQuote = async () => {
-            await axios.get("https://staging.quotable.io/random?minLength=100&maxLength=140&tags=technology")
-            .then(res => setQuote(res.data));
-        }
         getQuote();
 
         const getHourTheme = () => {
@@ -50,7 +50,11 @@ function App() {
             setInfoHour(infos);
         }
         getHourTheme();
-      }, []);
+    }, []);
+
+    const onChangeQuote = () => {
+        getQuote();
+    }
 
     const Loading = () => {
         return <h1>Loading</h1>
@@ -62,6 +66,7 @@ function App() {
                     infoZone={infoZone} 
                     infoHour={infoHour} 
                     quote={quote} 
+                    onChangeQuote={onChangeQuote}
                     isNight={isNight} 
                 />;
       }
