@@ -14,18 +14,18 @@ function App() {
         
         const getInfoUser = async () => {   
             await axios.get("https://worldtimeapi.org/api/ip")
-            .then(res => {
-                console.log(res.data)
-                setInfoTime(res.data)
-            })
-            //.then(res => setInfoTime(res.data));
+            // .then(res => {
+            //     console.log(res.data)
+            //     setInfoTime(res.data)
+            // })
+            .then(res => setInfoTime(res.data));
             
             await axios.get("https://freegeoip.app/json/")
-            .then(res => {
-                console.log(res.data)
-                setInfoZone(res.data)
-            })
-            //.then(res => setInfoZone(res.data));
+            // .then(res => {
+            //     console.log(res.data)
+            //     setInfoZone(res.data)
+            // })
+            .then(res => setInfoZone(res.data));
         }
         getInfoUser();
 
@@ -56,8 +56,14 @@ function App() {
         return <h1>Loading</h1>
     }
 
-    if (infoTime && infoZone && infoHour && isNight !== null) {
-        return <MyApp infoTime={infoTime} infoZone={infoZone} infoHour={infoHour} quote={quote} isNight={isNight} />;
+    if (infoTime && infoZone && infoHour && quote && isNight !== null) {
+        return <MyApp 
+                    infoTime={infoTime} 
+                    infoZone={infoZone} 
+                    infoHour={infoHour} 
+                    quote={quote} 
+                    isNight={isNight} 
+                />;
       }
       return <Loading />;
 }
