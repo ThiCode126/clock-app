@@ -1,0 +1,11 @@
+header#header-quote {
+    width: 324px;
+    margin: 0 auto;
+    display: grid;
+    padding-top: 32px;
+    grid-template-columns: auto 18px;
+
+        p#quote-content {
+            margin: 0 0 8px;
+        }
+}

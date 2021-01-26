@@ -56,7 +56,7 @@ function App() {
         return <h1>Loading</h1>
     }
 
-    if (infoTime) {
+    if (infoTime && infoZone && infoHour && isNight !== null) {
         return <MyApp infoTime={infoTime} infoZone={infoZone} infoHour={infoHour} quote={quote} isNight={isNight} />;
       }
       return <Loading />;

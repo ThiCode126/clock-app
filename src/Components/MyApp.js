@@ -1,11 +1,15 @@
 import React from 'react'
+import Header from './Header'
 
 
 const MyApp = ({ infoTime, infoZone, infoHour, quote, isNight }) => {
     return (
-        <section>
-             123
-        </section>
+        <>
+            <Header quote={quote} />
+            <section>
+                123
+            </section>
+        </>
     )
 }
 

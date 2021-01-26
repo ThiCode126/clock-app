@@ -1,5 +1,6 @@
 body {
     font-family: 'Inter', sans-serif;
+    color: $white;
     min-height: 100vh;
     max-height: 667px;
 
@@ -9,6 +10,11 @@ body {
 
     &.dark {
         background: url('../assets/mobile/bg-image-nighttime.jpg') no-repeat;
+    }
+
+    #root {
+        min-height: 100vh;
+        background: rgba($black, 0.4);
     }
 }
 
