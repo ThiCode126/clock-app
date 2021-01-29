@@ -6,16 +6,17 @@ body {
     height: 667px;
 
     &.light {
-        background: url('../assets/mobile/bg-image-daytime.jpg') no-repeat;
+        background: url('../assets/mobile/bg-image-daytime.jpg') no-repeat,  rgba($black, 0.4);
     }
 
     &.dark {
-        background: url('../assets/mobile/bg-image-nighttime.jpg') no-repeat;
+        background: url('../assets/mobile/bg-image-nighttime.jpg') no-repeat,  rgba($black, 0.4);
     }
 
     #root {
         background: rgba($black, 0.4);
         height: 100%;
+        width: 100%;
         display: flex;
         flex-direction: column;
 
@@ -31,7 +32,7 @@ body {
 
 @media (min-width: 376px ) {
     body {
-        max-height: 1024px;
+        height: 1024px;
     
         &.light {
             background: url('../assets/tablet/bg-image-daytime.jpg') no-repeat;
@@ -49,7 +50,7 @@ body {
 
 @media (min-width: 769px ) {
     body {
-        max-height: 800px;
+        height: 800px;
     
         &.light {
             background: url('../assets/desktop/bg-image-daytime.jpg') no-repeat;
