@@ -1,24 +1,24 @@
 header#header-quote {
-    width: 324px;
-    margin: 0 auto;
-    display: grid;
-    padding-top: 32px;
-    grid-template-columns: auto 18px;
+  width: 324px;
+  margin: 0 auto;
+  display: grid;
+  padding-top: 32px;
+  grid-template-columns: auto 18px;
 
-        #quote-content {
-            margin: 0 0 8px;
-            font-size: 12px;
-            line-height: 22px;
-        }
+  #quote-content {
+    margin: 0 0 8px;
+    font-size: 12px;
+    line-height: 22px;
+  }
 
-        #quote-author {
-            margin: 0;
-            font-weight: bold;
-            font-size: 12px;
-            line-height: 22px;
-        }
+  #quote-author {
+    margin: 0;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 22px;
+  }
 
-        #refresh-icon {
-            cursor: pointer;
-        }
+  #refresh-icon {
+    cursor: pointer;
+  }
 }

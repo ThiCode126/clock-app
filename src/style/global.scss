@@ -1,67 +1,69 @@
 body {
-    font-family: 'Inter', sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    color: $white;
-    height: 667px;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  color: $white;
+  height: 667px;
+
+  &.light {
+    background: url("../assets/mobile/bg-image-daytime.jpg") no-repeat,
+      rgba($black, 0.4);
+  }
+
+  &.dark {
+    background: url("../assets/mobile/bg-image-nighttime.jpg") no-repeat,
+      rgba($black, 0.4);
+  }
+
+  #root {
+    background: rgba($black, 0.4);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    &.more {
+      justify-content: space-between;
+    }
+
+    &.less {
+      justify-content: flex-end;
+    }
+  }
+}
+
+@media (min-width: 376px) {
+  body {
+    height: 1024px;
 
     &.light {
-        background: url('../assets/mobile/bg-image-daytime.jpg') no-repeat,  rgba($black, 0.4);
+      background: url("../assets/tablet/bg-image-daytime.jpg") no-repeat;
     }
 
     &.dark {
-        background: url('../assets/mobile/bg-image-nighttime.jpg') no-repeat,  rgba($black, 0.4);
+      background: url("../assets/tablet/bg-image-nighttime.jpg") no-repeat;
     }
 
     #root {
-        background: rgba($black, 0.4);
-        height: 100%;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-
-        &.more {
-            justify-content: space-between;
-        }
-
-        &.less {
-            justify-content: flex-end;
-        }
+      max-height: 1024px;
     }
+  }
 }
 
-@media (min-width: 376px ) {
-    body {
-        height: 1024px;
-    
-        &.light {
-            background: url('../assets/tablet/bg-image-daytime.jpg') no-repeat;
-        }
-    
-        &.dark {
-            background: url('../assets/tablet/bg-image-nighttime.jpg') no-repeat;
-        }
+@media (min-width: 769px) {
+  body {
+    height: 800px;
 
-        #root {
-            max-height: 1024px;
-        }
+    &.light {
+      background: url("../assets/desktop/bg-image-daytime.jpg") no-repeat;
     }
-}
 
-@media (min-width: 769px ) {
-    body {
-        height: 800px;
-    
-        &.light {
-            background: url('../assets/desktop/bg-image-daytime.jpg') no-repeat;
-        }
-    
-        &.dark {
-            background: url('../assets/desktop/bg-image-nighttime.jpg') no-repeat;
-        }
-
-        #root {
-            max-height: 800px;
-        }
+    &.dark {
+      background: url("../assets/desktop/bg-image-nighttime.jpg") no-repeat;
     }
+
+    #root {
+      max-height: 800px;
+    }
+  }
 }
