@@ -9,27 +9,27 @@ function App() {
     const [infoHour, setInfoHour] = useState(null);
     const [quote, setQuote] = useState(null);
     const [isNight, setIsNight] = useState(null);
+    const [isMore, setIsMore] = useState(false);
 
     const getQuote = async () => {
-        await axios.get("https://staging.quotable.io/random?minLength=100&maxLength=140&tags=technology")
-        .then(res => setQuote(res.data));
+        try {
+            await axios.get("https://api.quotable.io/random?minLength=100&maxLength=140&tags=technology")
+            .then(res => setQuote(res.data));
+        } catch (error) {
+            console.log(error)
+            setQuote({
+                "author": "Ada LoveLace",
+                "content": "The science of operations, as derived from mathematics more especially, is a science of itself, and has its own abstract truth and value."
+            })
+        }
     }
 
     useEffect(() => {
-        
         const getInfoUser = async () => {   
             await axios.get("https://worldtimeapi.org/api/ip")
-            // .then(res => {
-            //     console.log(res.data)
-            //     setInfoTime(res.data)
-            // })
             .then(res => setInfoTime(res.data));
             
             await axios.get("https://freegeoip.app/json/")
-            // .then(res => {
-            //     console.log(res.data)
-            //     setInfoZone(res.data)
-            // })
             .then(res => setInfoZone(res.data));
         }
         getInfoUser();
@@ -52,8 +52,21 @@ function App() {
         getHourTheme();
     }, []);
 
+    useEffect(() => {
+        let divRoot = document.getElementById('root')
+        if (isMore) {
+            divRoot.className = 'less';
+        } else {
+            divRoot.className = 'more';
+        }
+    }, [isMore])
+
     const onChangeQuote = () => {
         getQuote();
+    }
+
+    const onToggleMore = () => {
+        setIsMore(!isMore);
     }
 
     const Loading = () => {
@@ -68,6 +81,8 @@ function App() {
                     quote={quote} 
                     onChangeQuote={onChangeQuote}
                     isNight={isNight} 
+                    isMore={isMore} 
+                    onToggleMore={onToggleMore} 
                 />;
       }
       return <Loading />;

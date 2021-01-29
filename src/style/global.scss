@@ -3,8 +3,7 @@ body {
     font-style: normal;
     font-weight: normal;
     color: $white;
-    min-height: 100vh;
-    max-height: 667px;
+    height: 667px;
 
     &.light {
         background: url('../assets/mobile/bg-image-daytime.jpg') no-repeat;
@@ -15,8 +14,18 @@ body {
     }
 
     #root {
-        min-height: 100vh;
         background: rgba($black, 0.4);
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+
+        &.more {
+            justify-content: space-between;
+        }
+
+        &.less {
+            justify-content: flex-end;
+        }
     }
 }
 
@@ -31,6 +40,10 @@ body {
         &.dark {
             background: url('../assets/tablet/bg-image-nighttime.jpg') no-repeat;
         }
+
+        #root {
+            max-height: 1024px;
+        }
     }
 }
 
@@ -44,6 +57,10 @@ body {
     
         &.dark {
             background: url('../assets/desktop/bg-image-nighttime.jpg') no-repeat;
+        }
+
+        #root {
+            max-height: 800px;
         }
     }
 }

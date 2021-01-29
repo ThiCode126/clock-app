@@ -1,0 +1,31 @@
+.btn-more {
+    background: #FFFFFF;
+    border-radius: 28px;
+    width: 94px;
+    height: 39px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 17px;
+    padding-right: 4px;
+    margin: 48px 0 0;
+
+    .text {
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: 3.75px;
+        text-transform: uppercase;
+        color: rgba($black, 0.5);
+    }
+
+    img.icon  {
+        height: $smallSize;
+        width: $smallSize;
+
+        &.more {
+            transform: rotate(180deg);
+        }
+    }
+}
