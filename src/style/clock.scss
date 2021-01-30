@@ -1,50 +1,65 @@
 section#clock {
-    width: 324px;
-    margin: 0 auto;
-    padding-bottom: 40px;
+  width: 324px;
+  margin: 0 auto;
+  padding-bottom: 40px;
 
-    .top-text {
-        margin: 0;
-        display: flex;
+  .top-text {
+    margin: 0;
+    display: flex;
 
-        img.icon {
-            width: 24px;
-            height: 24px;
-        }
-
-        .good {
-            margin-left: 16px;
-            letter-spacing: 3px;
-            font-size: 15px;
-            line-height: 25px;
-            text-transform: uppercase;
-        }
-
+    img.icon {
+      width: 24px;
+      height: 24px;
     }
 
-    .hour {
-        margin: 16px 0;
-        font-weight: bold;
-        font-size: 100px;
-        line-height: 100px;
-        letter-spacing: -2.5px;
-
-        .more-hour {
-            padding-left: 5px;
-            font-weight: 300;
-            font-size: 15px;
-            line-height: 28px;
-            letter-spacing: 0;
-        }
+    .good {
+      margin-left: 16px;
+      letter-spacing: 3px;
+      font-size: 15px;
+      line-height: 25px;
+      text-transform: uppercase;
     }
+  }
 
-    .localisation {
-        margin: 0;
-        font-weight: bold;
-        font-size: 15px;
-        line-height: 28px;
-        letter-spacing: 3px;
-        text-transform: uppercase;
+  .hour {
+    margin: 16px 0;
+    font-weight: bold;
+    font-size: 100px;
+    line-height: 100px;
+    letter-spacing: -2.5px;
+
+    .more-hour {
+      padding-left: 5px;
+      font-weight: 300;
+      font-size: 15px;
+      line-height: 28px;
+      letter-spacing: 0;
     }
+  }
 
+  .localisation {
+    margin: 0;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 28px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+}
+
+/**
+* ? Tablet
+*/
+@media (min-width: 768px) {
+  section#clock {
+    width: 499px;
+  }
+}
+/**
+* ? DeskTop
+*/
+@media (min-width: 1440px) {
+  section#clock {
+
+  }
 }

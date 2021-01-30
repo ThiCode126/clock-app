@@ -6,13 +6,11 @@ body {
   height: 667px;
 
   &.light {
-    background: url("../assets/mobile/bg-image-daytime.jpg") no-repeat,
-      rgba($black, 0.4);
+    background: url("../assets/mobile/bg-image-daytime.jpg") no-repeat center, rgba($black, 0.4);
   }
 
   &.dark {
-    background: url("../assets/mobile/bg-image-nighttime.jpg") no-repeat,
-      rgba($black, 0.4);
+    background: url("../assets/mobile/bg-image-nighttime.jpg") no-repeat, rgba($black, 0.4);
   }
 
   #root {
@@ -31,17 +29,19 @@ body {
     }
   }
 }
-
-@media (min-width: 376px) {
+/**
+* ? Tablet
+*/
+@media (min-width: 768px) {
   body {
     height: 1024px;
 
     &.light {
-      background: url("../assets/tablet/bg-image-daytime.jpg") no-repeat;
+      background: url("../assets/tablet/bg-image-daytime.jpg") no-repeat center, rgba($black, 0.4);
     }
 
     &.dark {
-      background: url("../assets/tablet/bg-image-nighttime.jpg") no-repeat;
+      background: url("../assets/tablet/bg-image-nighttime.jpg") no-repeat center, rgba($black, 0.4);
     }
 
     #root {
@@ -49,17 +49,19 @@ body {
     }
   }
 }
-
-@media (min-width: 769px) {
+/**
+* ? DeskTop
+*/
+@media (min-width: 1440px) {
   body {
     height: 800px;
 
     &.light {
-      background: url("../assets/desktop/bg-image-daytime.jpg") no-repeat;
+      background: url("../assets/desktop/bg-image-daytime.jpg") no-repeat center, rgba($black, 0.4);
     }
 
     &.dark {
-      background: url("../assets/desktop/bg-image-nighttime.jpg") no-repeat;
+      background: url("../assets/desktop/bg-image-nighttime.jpg") no-repeat center, rgba($black, 0.4);
     }
 
     #root {
