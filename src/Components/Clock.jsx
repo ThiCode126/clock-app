@@ -19,7 +19,7 @@ const Clock = ({ infoZone, infoHour, isNight, isMore, onToggleMore }) => {
     <section id="clock" className={isMore ? "more" : "less"}>
       <p className="top-text">
         <img className="icon" alt="icon" src={isNight ? IconMoon : IconSun} />
-        <span className="good">{SayHello()}</span>
+        <span className="good">{SayHello()}<span className="no-mobile">, it's currently</span></span>
       </p>
       <h1 className="hour">
         {infoHour.hours}

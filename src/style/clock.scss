@@ -53,6 +53,16 @@ section#clock {
 @media (min-width: 768px) {
   section#clock {
     width: 499px;
+    margin-left: 64px;
+
+    .top-text {
+
+      .good {
+        letter-spacing: 3.6px;
+        font-size: 18px;
+        line-height: 28px;
+      }
+    }
   }
 }
 /**

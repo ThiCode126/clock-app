@@ -28,6 +28,10 @@ body {
       justify-content: flex-end;
     }
   }
+
+  .no-mobile {
+    display: none;
+  }
 }
 /**
 * ? Tablet
@@ -46,6 +50,10 @@ body {
 
     #root {
       max-height: 1024px;
+    }
+
+    .no-mobile {
+      display: inline;
     }
   }
 }
