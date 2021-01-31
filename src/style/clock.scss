@@ -63,6 +63,23 @@ section#clock {
         line-height: 28px;
       }
     }
+
+    .hour {
+      margin: 0;
+      font-size: 175px;
+      line-height: 175px;
+      letter-spacing: -4.375px;
+  
+      .more-hour {
+        padding-left: 11px;
+        font-size: 32px;
+      }
+    }
+
+    .localisation {
+      font-size: 18px;
+      letter-spacing: 3.6px;
+    }
   }
 }
 /**
@@ -70,6 +87,7 @@ section#clock {
 */
 @media (min-width: 1440px) {
   section#clock {
-
+    width: 499px;
+    margin: 0 auto;
   }
 }
