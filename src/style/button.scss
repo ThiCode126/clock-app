@@ -10,6 +10,13 @@
   padding-left: 17px;
   padding-right: 4px;
   margin: 48px 0 0;
+  cursor: pointer;
+
+  &:hover {
+    .icon circle {
+      fill: #999;
+    }
+  }
 
   .text {
     font-weight: bold;
@@ -20,7 +27,7 @@
     color: rgba($black, 0.5);
   }
 
-  img.icon {
+  .icon {
     height: $smallSize;
     width: $smallSize;
 
@@ -45,13 +52,9 @@
       letter-spacing: 5px;
     }
 
-    img.icon {
+    .icon {
       height: $largeSize;
       width: $largeSize;
-  
-      &.more {
-        transform: rotate(180deg);
-      }
     }
   }
 }
