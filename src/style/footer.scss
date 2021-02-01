@@ -1,5 +1,7 @@
 body {
   footer.more {
+    width: 323px;
+    margin: 0 auto;
     padding: 48px 26px;
     display: grid;
     grid-template-columns: 1fr;
@@ -48,6 +50,7 @@ body {
 @media (min-width: 768px) {
   body {
     footer.more {
+      width: 538px;
       padding: 119px 166px 119px 64px;
       grid-template-columns: 303px 155px;
       grid-template-rows: repeat(2, 1fr);
@@ -76,8 +79,9 @@ body {
 @media (min-width: 1440px) {
   body {
     footer.more {
-      padding: 74px 431px 74px 165px;
-      grid-template-columns: auto 179px;
+      width: 1110px;
+      padding: 74px 165px 74px 165px;
+      grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(2, 1fr);
       gap: 42px 242px;
       position: relative;
