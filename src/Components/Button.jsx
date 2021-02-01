@@ -8,8 +8,8 @@ const Button = ({ isMore, onToggleMore }) => {
       <span className="text">{moreOrLess}</span>
       <svg  className={`icon ${moreOrLess}`} xmlns="http://www.w3.org/2000/svg">
         <g fill="none" fillRule="evenodd">
-          <circle fill="#303030" cx="20" cy="20" r="20" />
-          <path stroke="#FFF" strokeWidth="2" d="M14 23l6-6 6 6" />
+          <circle fill="#303030" cx="16" cy="16" r="16" />
+          <path stroke="#FFF" strokeWidth="2" d="M11.2 13.6001L16 18.4001L20.8 13.6001" />
         </g>
       </svg>
     </div>
