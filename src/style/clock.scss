@@ -54,7 +54,6 @@ section#clock {
     width: 640px;
 
     .top-text {
-
       .good {
         letter-spacing: 3.6px;
         font-size: 18px;
@@ -67,7 +66,7 @@ section#clock {
       font-size: 175px;
       line-height: 175px;
       letter-spacing: -4.375px;
-  
+
       .more-hour {
         padding-left: 11px;
         font-size: 32px;
@@ -90,5 +89,28 @@ section#clock {
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
+
+    .top-text {
+      .good {
+        letter-spacing: 4px;
+        font-size: 20px;
+      }
+    }
+
+    .hour {
+      margin: 16px 0;
+      font-size: 200px;
+      line-height: 200px;
+      letter-spacing: -5px;
+
+      .more-hour {
+        font-size: 40px;
+      }
+    }
+
+    .localisation {
+      font-size: 24px;
+      letter-spacing: 4.8px;
+    }
   }
 }
