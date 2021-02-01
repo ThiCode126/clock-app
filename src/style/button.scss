@@ -1,31 +1,57 @@
 .btn-more {
-    background: #FFFFFF;
-    border-radius: 28px;
-    width: 94px;
-    height: 39px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 17px;
-    padding-right: 4px;
-    margin: 48px 0 0;
+  background: #ffffff;
+  border-radius: 28px;
+  width: 94px;
+  height: 39px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 17px;
+  padding-right: 4px;
+  margin: 48px 0 0;
+
+  .text {
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 3.75px;
+    text-transform: uppercase;
+    color: rgba($black, 0.5);
+  }
+
+  img.icon {
+    height: $smallSize;
+    width: $smallSize;
+
+    &.more {
+      transform: rotate(180deg);
+    }
+  }
+}
+/**
+* ? Tablet & DeskTop
+*/
+@media (min-width: 768px) {
+  .btn-more {
+    width: 116px;
+    height: 56px;
+    padding-left: 21px;
+    padding-right: 9px;
 
     .text {
-        font-weight: bold;
-        font-size: 12px;
-        line-height: 14px;
-        letter-spacing: 3.75px;
-        text-transform: uppercase;
-        color: rgba($black, 0.5);
+      font-size: 16px;
+      line-height: 28px;
+      letter-spacing: 5px;
     }
 
-    img.icon  {
-        height: $smallSize;
-        width: $smallSize;
-
-        &.more {
-            transform: rotate(180deg);
-        }
+    img.icon {
+      height: $largeSize;
+      width: $largeSize;
+  
+      &.more {
+        transform: rotate(180deg);
+      }
     }
+  }
 }

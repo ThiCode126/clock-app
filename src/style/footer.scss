@@ -1,44 +1,110 @@
 body {
+  footer.more {
+    padding: 48px 26px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 16px;
 
+    .in-footer {
+      display: flex;
+      justify-content: space-between;
+
+      .title {
+        font-size: 10px;
+        line-height: 28px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+      }
+
+      .info {
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 24px;
+      }
+    }
+  }
+
+  &.light {
     footer.more {
-        padding: 48px 26px;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(4, 1fr);
-        gap: 16px;
-
-        .in-footer {
-            display: flex;
-            justify-content: space-between;
-
-            .title {
-                font-size: 10px;
-                line-height: 28px;
-                letter-spacing: 2px;
-                text-transform: uppercase;
-            }
-
-            .info {
-                font-weight: bold;
-                font-size: 20px;
-                line-height: 24px;
-            }
-        }
+      background: rgba(255, 255, 255, 0.75);
+      backdrop-filter: blur(40.7742px);
+      color: $grey;
     }
+  }
 
-    &.light {
-        footer.more {
-            background: rgba(255, 255, 255, 0.75);
-            backdrop-filter: blur(40.7742px);
-            color: $grey;
-        }
+  &.dark {
+    footer.more {
+      background: rgba(0, 0, 0, 0.75);
+      backdrop-filter: blur(40.7742px);
+      color: $white;
     }
+  }
+}
 
-    &.dark {
-        footer.more {
-            background: rgba(0, 0, 0, 0.75);
-            backdrop-filter: blur(40.7742px);
-            color: $white;
+/**
+* ? Tablet
+*/
+@media (min-width: 768px) {
+  body {
+    footer.more {
+      padding: 119px 166px 119px 64px;
+      grid-template-columns: 303px 155px;
+      grid-template-rows: repeat(2, 1fr);
+      gap: 48px 80px;
+
+      .in-footer {
+        flex-direction: column;
+
+        .title {
+          font-size: 13px;
+          line-height: 28px;
+          letter-spacing: 2.6px;
         }
+
+        .info {
+          font-size: 40px;
+          line-height: 48px;
+        }
+      }
     }
+  }
+}
+/**
+* ? DeskTop
+*/
+@media (min-width: 1440px) {
+  body {
+    footer.more {
+      padding: 74px 431px 74px 165px;
+      grid-template-columns: auto 179px;
+      grid-template-rows: repeat(2, 1fr);
+      gap: 42px 242px;
+      position: relative;
+
+      &::after {
+        position: absolute;
+        content: "";
+        top: 74px;
+        right: 50%;
+        width: 1px;
+        height: 252px;
+        opacity: 0.25;
+      }
+
+      .in-footer {
+        height: 105px;
+
+        .title {
+          font-size: 15px;
+          letter-spacing: 3px;
+        }
+
+        .info {
+          font-size: 56px;
+          line-height: 68px;
+        }
+      }
+    }
+  }
 }

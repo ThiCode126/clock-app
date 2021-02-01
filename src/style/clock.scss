@@ -46,7 +46,6 @@ section#clock {
     text-transform: uppercase;
   }
 }
-
 /**
 * ? Tablet
 */
@@ -87,7 +86,11 @@ section#clock {
 */
 @media (min-width: 1440px) {
   section#clock {
-    width: 499px;
+    width: 1110px;
     margin: 0 auto;
+    padding-bottom: 98px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
   }
 }

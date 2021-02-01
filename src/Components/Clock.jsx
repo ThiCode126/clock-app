@@ -17,6 +17,7 @@ const Clock = ({ infoZone, infoHour, isNight, isMore, onToggleMore }) => {
 
   return (
     <section id="clock" className={isMore ? "more" : "less"}>
+      <div>
       <p className="top-text">
         <img className="icon" alt="icon" src={isNight ? IconMoon : IconSun} />
         <span className="good">{SayHello()}<span className="no-mobile">, it's currently</span></span>
@@ -29,6 +30,7 @@ const Clock = ({ infoZone, infoHour, isNight, isMore, onToggleMore }) => {
         in {infoZone.city !== "" ? infoZone.city : "Paris"},{" "}
         {infoZone.country_code !== "" ? infoZone.country_code : "FR"}
       </p>
+      </div>
       <Button isMore={isMore} onToggleMore={onToggleMore} />
     </section>
   );

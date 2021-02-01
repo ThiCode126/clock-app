@@ -66,10 +66,18 @@ body {
 
     &.light {
       background: url("../assets/desktop/bg-image-daytime.jpg") no-repeat center, rgba($black, 0.4);
+
+      footer.more::after{
+        background: #303030;
+      }
     }
 
     &.dark {
       background: url("../assets/desktop/bg-image-nighttime.jpg") no-repeat center, rgba($black, 0.4);
+
+      footer.more::after{
+        background: #ffffff;
+      }
     }
 
     #root {
