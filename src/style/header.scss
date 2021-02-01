@@ -43,3 +43,11 @@ header#header-quote {
     }
   }
 }
+/**
+* ? DeskTop
+*/
+@media (min-width: 1440px) {
+  header#header-quote {
+    padding: 58px 702px 0 165px;
+  }
+}
